@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: becore
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: becore
+  template:
+    metadata:
+      labels:
+        app: becore
+    spec:
+      containers:
+      - image: fajarsujai/becore:v1
+        name: becore
+        ports:
+        - containerPort: 3000

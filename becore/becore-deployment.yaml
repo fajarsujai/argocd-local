@@ -14,7 +14,7 @@ spec:
         app: becore
     spec:
       containers:
-      - image: fajarsujai/becore:v1
+      - image: fajarsujai/becore:ccd0c95
         name: becore
         ports:
         - containerPort: 3000

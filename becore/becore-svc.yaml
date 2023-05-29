@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: be-core-becore
+  name: becore
 spec:
   ports:
   - port: 3000
     targetPort: 3000
   selector:
-    app: be-core-becore
+    app: becore

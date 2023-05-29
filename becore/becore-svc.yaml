@@ -3,7 +3,7 @@ kind: Service
 metadata:
   annotations:
     meta.helm.sh/release-name: becore
-    meta.helm.sh/release-namespace: default
+    meta.helm.sh/release-namespace: backend
   creationTimestamp: "2023-05-29T14:22:06Z"
   labels:
     app.kubernetes.io/instance: becore
@@ -12,7 +12,7 @@ metadata:
     app.kubernetes.io/version: 1.16.0
     helm.sh/chart: becore-0.1.0
   name: becore
-  namespace: default
+  namespace: backend
   resourceVersion: "25873"
   uid: e3153fdd-84c3-4e8c-8cb8-a33939f605ab
 spec:

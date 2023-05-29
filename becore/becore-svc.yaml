@@ -1,10 +1,37 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    meta.helm.sh/release-name: becore
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2023-05-29T14:22:06Z"
+  labels:
+    app.kubernetes.io/instance: becore
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: becore
+    app.kubernetes.io/version: 1.16.0
+    helm.sh/chart: becore-0.1.0
   name: becore
+  namespace: default
+  resourceVersion: "25873"
+  uid: e3153fdd-84c3-4e8c-8cb8-a33939f605ab
 spec:
+  clusterIP: 10.103.225.224
+  clusterIPs:
+  - 10.103.225.224
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
   ports:
-  - port: 3000
-    targetPort: 3000
+  - name: http
+    port: 3000
+    protocol: TCP
+    targetPort: http
   selector:
-    app: becore
+    app.kubernetes.io/instance: becore
+    app.kubernetes.io/name: becore
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -38,7 +38,7 @@ apiVersion: apps/v1
           app.kubernetes.io/name: becore
       spec:
         containers:
-        - image: fajarsujai/be-core:5dcb2af
+        - image: fajarsujai/be-core:ccd0c95
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3

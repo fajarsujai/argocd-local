@@ -15,9 +15,10 @@ metadata:
     helm.sh/chart: becore-0.1.0
   name: becore
   namespace: backend
-  resourceVersion: ""
-  uid:
+  resourceVersion: "30871"
+  uid: ea2f6e79-694d-47b1-aaaf-5af7e44e6ffd
 spec:
+  progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
@@ -37,7 +38,7 @@ spec:
         app.kubernetes.io/name: becore
     spec:
       containers:
-      - image: fajarsujai/be-core:ccd0c95
+      - image: fajarsujai/be-core:5dcb2af
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -45,6 +46,9 @@ spec:
             path: /
             port: http
             scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
         name: becore
         ports:
         - containerPort: 3000

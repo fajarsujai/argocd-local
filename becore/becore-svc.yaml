@@ -4,7 +4,7 @@ metadata:
   annotations:
     meta.helm.sh/release-name: becore
     meta.helm.sh/release-namespace: backend
-  creationTimestamp: "2023-05-29T14:22:06Z"
+  creationTimestamp: "2023-05-29T15:41:06Z"
   labels:
     app.kubernetes.io/instance: becore
     app.kubernetes.io/managed-by: Helm
@@ -13,12 +13,12 @@ metadata:
     helm.sh/chart: becore-0.1.0
   name: becore
   namespace: backend
-  resourceVersion: "25873"
-  uid: e3153fdd-84c3-4e8c-8cb8-a33939f605ab
+  resourceVersion: "28789"
+  uid: b05ca2cc-aece-45e9-beb7-1ffb30fb1b01
 spec:
-  clusterIP: 10.103.225.224
+  clusterIP: 10.101.230.16
   clusterIPs:
-  - 10.103.225.224
+  - 10.101.230.16
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4
@@ -33,5 +33,3 @@ spec:
     app.kubernetes.io/name: becore
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
